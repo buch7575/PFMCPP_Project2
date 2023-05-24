@@ -12,18 +12,16 @@ video: Chapter 2 - Part 3
 
  Purpose:  This project will teach you how to declare variables and free functions.  
  This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
+
+float bar = 0.f; float gas = 2.5f; float timeUntilFinished = 855748484.f;
+void rentACar( int rentalDuration = 3, int carType = 0);
+rentACar(6, 2);
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ integer (int), floating-point (float), character (char), boolean (bool), double floating-point (double), Valueless (void), Wide characater (wchar_t)
+
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,8 +62,11 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
-
+    int age = 60; int employeeID = 33248;  int rating = 10;
+    char name = "Ed"; char country = "USA"; char state = "WA";
+    float weightInTons = 2.4f; float energy = 44.55f; float length = 25.3f;
+    bool passingGrade = true; bool poweredOn = false; bool winner = true;
+    double temperature = 98.6f; double speed = 122.55f; velocity = 455.099f;
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 }
