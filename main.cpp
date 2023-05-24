@@ -62,13 +62,13 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    int age = 60; int employeeID = 33248;  int rating = 10;
-    char name = "Ed"; char country = "USA"; char state = "WA";
-    float weightInTons = 2.4f; float energy = 44.55f; float length = 25.3f;
-    bool passingGrade = true; bool poweredOn = false; bool winner = true;
-    double temperature = 98.6f; double speed = 122.55f; velocity = 455.099f;
+    int age = 60; int employeeID = 33248;  int rating = 10;  //declaration and initialization of 'int' variables
+    char name = "Ed"; char country = "USA"; char state = "WA";  //declaration and initialization of 'char' variables
+    float weightInTons = 2.4f; float energy = 44.55f; float length = 25.3f;  //declaration and initialization of 'float' variables
+    bool passingGrade = true; bool poweredOn = false; bool winner = true;  //declaration and initialization of 'bool' variables
+    double temperature = 98.6; double speed = 122.55; velocity = 455.099;  //declaration and initialization of 'double' variables
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, employeeID, rating, name, country, state, weightInTons, energy, length, passingGrade, poweredOn, winner, temperature, speed, velocity); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
