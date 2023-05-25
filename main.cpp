@@ -76,6 +76,12 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
+
+increaseEnergy(char gamer);
+adjustTemperature(float degrees);
+combineName(char firstName, char middleName, char lastName);
+calculateTaxes(float amount, float taxRate);
+
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
