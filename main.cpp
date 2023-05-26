@@ -77,11 +77,6 @@ void variableDeclarations()
  note: this example shows the result after completing steps 3-8
  */
 
-increaseEnergy(char gamer);
-adjustTemperature(float degrees);
-combineName(char firstName, char middleName, char lastName);
-calculateTaxes(float amount, float taxRate);
-
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
@@ -91,43 +86,78 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int increaseEnergy(char gamer)
+{
+    ignoreUnused(gamer);
+    return {};
+}
 /*
  2)
  */
-
+adjustTemperature(float degrees)
+{
+    ignoreUnused(degrees);
+}
 /*
  3)
  */
-
+char combineName(char firstName, char middleName, char lastName)
+{
+    ignoreUnused(firstName, middleName, lastName);
+    return {};
+}
 /*
  4)
  */
-
+float calculateTaxes(float amount, float taxRate = 0.098f)
+{
+    ignoreUnused(amount, taxRate);
+    return {};
+}
 /*
  5)
  */
-
+char calculateGrade(int testScore, int homeworkScore)
+{
+    ignoreUnused(testScore, homeworkScore);
+    return {};
+}
 /*
  6)
  */
-
+rechargeLaser(int fuel = 5)
+{
+    ignoreUnused(fuel);
+}
 /*
  7)
  */
-
+int calculateHealth(int damage, int treasure = 100)
+{
+    ignoreUnused(damage, treasure);
+    return {};
+}
 /*
  8)
  */
-
+playNote(int midiNote, int volume, int duration)
+{
+    ignoreUnused(midiNote, volume, duration);
+}
 /*
  9)
  */
-
+deleteFile(char filename, char directoryName)
+{
+    ignoreUnused(filename, directoryName);
+}
 /*
  10)
  */
-
+insertMeasure(float location, int trackNumber)
+{
+    ignoreUnused(location, trackNumber);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -148,27 +178,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto energyLevel = increaseEnergy(char "wizard");
     //2)
-    
+    adjustTemperature(2.5f);
     //3)
-    
+    auto employeeName = combineName("John", "William", "Doe");
     //4)
-    
+    auto taxes = calculateTaxes(25.67f, .098f);
     //5)
-    
+    auto grade = calculateGrade(87, 79);
     //6)
-    
+    rechargeLaser(6);
     //7)
-    
+    auto health = calculateHealth(3, 100);
     //8)
-    
+    playNote(135, 7, 2);
     //9)
-    
+    deleteFile("temp.txt", "windows");
     //10)
+    insertMeasure(3.5, 4);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, energyLevel, employeeName, taxes, grade, );
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
