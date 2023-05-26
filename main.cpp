@@ -63,12 +63,12 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     int age = 60; int employeeID = 33248;  int rating = 10;  //declaration and initialization of 'int' variables
-    char name = "Ed"; char country = "USA"; char state = "WA";  //declaration and initialization of 'char' variables
+    char grade = "A"; char response = "Y"; char conversion = "C";  //declaration and initialization of 'char' variables
     float weightInTons = 2.4f; float energy = 44.55f; float length = 25.3f;  //declaration and initialization of 'float' variables
     bool passingGrade = true; bool poweredOn = false; bool winner = true;  //declaration and initialization of 'bool' variables
     double temperature = 98.6; double speed = 122.55; velocity = 455.099;  //declaration and initialization of 'double' variables
     
-    ignoreUnused(number, age, employeeID, rating, name, country, state, weightInTons, energy, length, passingGrade, poweredOn, winner, temperature, speed, velocity); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, employeeID, rating, grade, response, conversion, weightInTons, energy, length, passingGrade, poweredOn, winner, temperature, speed, velocity); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -86,9 +86,9 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-int increaseEnergy(char gamer)
+int increaseEnergy(char player)
 {
-    ignoreUnused(gamer);
+    ignoreUnused(player);
     return {};
 }
 /*
@@ -101,9 +101,9 @@ adjustTemperature(float degrees)
 /*
  3)
  */
-char combineName(char firstName, char middleName, char lastName)
+feedDog(int dogWeight, float cupsOfFood)
 {
-    ignoreUnused(firstName, middleName, lastName);
+    ignoreUnused(dogWeight, cupsOfFood);
     return {};
 }
 /*
@@ -147,9 +147,9 @@ playNote(int midiNote, int volume, int duration)
 /*
  9)
  */
-deleteFile(char filename, char directoryName)
+deleteNote(int notePosition)
 {
-    ignoreUnused(filename, directoryName);
+    ignoreUnused(notePosition);
 }
 /*
  10)
@@ -178,11 +178,11 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto energyLevel = increaseEnergy(char "wizard");
+    auto energyLevel = increaseEnergy("W");
     //2)
     adjustTemperature(2.5f);
     //3)
-    auto employeeName = combineName("John", "William", "Doe");
+    auto dogFed = feedDog(22, 2.5f);
     //4)
     auto taxes = calculateTaxes(25.67f, .098f);
     //5)
@@ -194,11 +194,11 @@ int main()
     //8)
     playNote(135, 7, 2);
     //9)
-    deleteFile("temp.txt", "windows");
+    deleteNote(55);
     //10)
     insertMeasure(3.5, 4);
     
-    ignoreUnused(carRented, energyLevel, employeeName, taxes, grade, );
+    ignoreUnused(carRented, energyLevel, dogFed, taxes, grade, health);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
