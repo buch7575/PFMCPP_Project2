@@ -63,10 +63,10 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     int age = 60; int employeeID = 33248;  int rating = 10;  //declaration and initialization of 'int' variables
-    char grade = "A"; char response = "Y"; char conversion = "C";  //declaration and initialization of 'char' variables
+    char grade = 'A'; char response = 'Y'; char conversion = 'C';  //declaration and initialization of 'char' variables
     float weightInTons = 2.4f; float energy = 44.55f; float length = 25.3f;  //declaration and initialization of 'float' variables
     bool passingGrade = true; bool poweredOn = false; bool winner = true;  //declaration and initialization of 'bool' variables
-    double temperature = 98.6; double speed = 122.55; velocity = 455.099;  //declaration and initialization of 'double' variables
+    double temperature = 98.6; double speed = 122.55; double velocity = 455.099;  //declaration and initialization of 'double' variables
     
     ignoreUnused(number, age, employeeID, rating, grade, response, conversion, weightInTons, energy, length, passingGrade, poweredOn, winner, temperature, speed, velocity); //passing each variable declared to the ignoreUnused() function
 }
@@ -94,17 +94,16 @@ int increaseEnergy(char player)
 /*
  2)
  */
-adjustTemperature(float degrees)
+void adjustTemperature(float degrees)
 {
     ignoreUnused(degrees);
 }
 /*
  3)
  */
-feedDog(int dogWeight, float cupsOfFood)
+void feedDog(int dogWeight, float cupsOfFood)
 {
     ignoreUnused(dogWeight, cupsOfFood);
-    return {};
 }
 /*
  4)
@@ -125,7 +124,7 @@ char calculateGrade(int testScore, int homeworkScore)
 /*
  6)
  */
-rechargeLaser(int fuel = 5)
+void rechargeLaser(int fuel = 5)
 {
     ignoreUnused(fuel);
 }
@@ -140,21 +139,21 @@ int calculateHealth(int damage, int treasure = 100)
 /*
  8)
  */
-playNote(int midiNote, int volume, int duration)
+void playNote(int midiNote, int volume, int duration)
 {
     ignoreUnused(midiNote, volume, duration);
 }
 /*
  9)
  */
-deleteNote(int notePosition)
+void deleteNote(int notePosition)
 {
     ignoreUnused(notePosition);
 }
 /*
  10)
  */
-insertMeasure(float location, int trackNumber)
+void insertMeasure(float location, int trackNumber)
 {
     ignoreUnused(location, trackNumber);
 }
@@ -178,11 +177,11 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto energyLevel = increaseEnergy("W");
+    auto energyLevel = increaseEnergy('W');
     //2)
     adjustTemperature(2.5f);
     //3)
-    auto dogFed = feedDog(22, 2.5f);
+    feedDog(22, 2.5f);
     //4)
     auto taxes = calculateTaxes(25.67f, .098f);
     //5)
@@ -198,7 +197,7 @@ int main()
     //10)
     insertMeasure(3.5, 4);
     
-    ignoreUnused(carRented, energyLevel, dogFed, taxes, grade, health);
+    ignoreUnused(carRented, energyLevel, taxes, grade, health);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
