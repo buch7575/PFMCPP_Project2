@@ -12,18 +12,16 @@ video: Chapter 2 - Part 3
 
  Purpose:  This project will teach you how to declare variables and free functions.  
  This will be the first project where the code you write will be compiled and you will be responsible for making sure it compiles before submitting it for review.
+
+float bar = 0.f; float gas = 2.5f; float timeUntilFinished = 855748484.f;
+void rentACar( int rentalDuration = 3, int carType = 0);
+rentACar(6, 2);
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
  
- 
- 
- 
- 
- 
- 
- 
- 
+ integer (int), floating-point (float), character (char), boolean (bool), double floating-point (double), Valueless (void), Wide characater (wchar_t)
+
  
 2) for each primitive type, write out 3 variable declarations inside the variableDeclaration() function on line 59.
     a) give each variable declaration an initial value
@@ -64,10 +62,13 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int age = 60; int employeeID = 33248;  int rating = 10;  //declaration and initialization of 'int' variables
+    char grade = 'A'; char response = 'Y'; char conversion = 'C';  //declaration and initialization of 'char' variables
+    float weightInTons = 2.4f; float energy = 44.55f; float length = 25.3f;  //declaration and initialization of 'float' variables
+    bool passingGrade = true; bool poweredOn = false; bool winner = true;  //declaration and initialization of 'bool' variables
+    double temperature = 98.6; double speed = 122.55; double velocity = 455.099;  //declaration and initialization of 'double' variables
     
-
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, age, employeeID, rating, grade, response, conversion, weightInTons, energy, length, passingGrade, poweredOn, winner, temperature, speed, velocity); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -75,6 +76,7 @@ void variableDeclarations()
  example:
  note: this example shows the result after completing steps 3-8
  */
+
 bool rentACar(int rentalDuration, int carType = 0)  //function declaration with random number of arguments, arbitrary number of arguments have default value
 { 
     ignoreUnused(rentalDuration, carType); //passing each function parameter to the ignoreUnused() function
@@ -84,43 +86,77 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int increaseEnergy(char player)
+{
+    ignoreUnused(player);
+    return {};
+}
 /*
  2)
  */
-
+void adjustTemperature(float degrees)
+{
+    ignoreUnused(degrees);
+}
 /*
  3)
  */
-
+void feedDog(int dogWeight, float cupsOfFood)
+{
+    ignoreUnused(dogWeight, cupsOfFood);
+}
 /*
  4)
  */
-
+float calculateTaxes(float amount, float taxRate = 0.098f)
+{
+    ignoreUnused(amount, taxRate);
+    return {};
+}
 /*
  5)
  */
-
+char calculateGrade(int testScore, int homeworkScore)
+{
+    ignoreUnused(testScore, homeworkScore);
+    return {};
+}
 /*
  6)
  */
-
+void rechargeLaser(int fuel = 5)
+{
+    ignoreUnused(fuel);
+}
 /*
  7)
  */
-
+int calculateHealth(int damage, int treasure = 100)
+{
+    ignoreUnused(damage, treasure);
+    return {};
+}
 /*
  8)
  */
-
+void playNote(int midiNote, int volume, int duration)
+{
+    ignoreUnused(midiNote, volume, duration);
+}
 /*
  9)
  */
-
+void deleteNote(int notePosition)
+{
+    ignoreUnused(notePosition);
+}
 /*
  10)
  */
-
+void insertMeasure(float location, int trackNumber)
+{
+    ignoreUnused(location, trackNumber);
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +177,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto energyLevel = increaseEnergy('W');
     //2)
-    
+    adjustTemperature(2.5f);
     //3)
-    
+    feedDog(22, 2.5f);
     //4)
-    
+    auto taxes = calculateTaxes(25.67f, .098f);
     //5)
-    
+    auto grade = calculateGrade(87, 79);
     //6)
-    
+    rechargeLaser(6);
     //7)
-    
+    auto health = calculateHealth(3, 100);
     //8)
-    
+    playNote(135, 7, 2);
     //9)
-    
+    deleteNote(55);
     //10)
+    insertMeasure(3.5, 4);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, energyLevel, taxes, grade, health);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
